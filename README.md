@@ -49,7 +49,7 @@ JsDeveloper.thingsWantToDevelop = {
   viewLibrary: "React"
 };
 
-JsDeveloper.thingsToShowInterest = {
+JsDeveloper.takeInterestIn = {
   gameDev: true,
   vueJs: true,
   AWS: true
