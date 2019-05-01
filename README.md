@@ -1,4 +1,4 @@
-### Creative JavaScript Developer CV (Combo 😉💣🌶👍)
+### Creative JavaScript Developer CV (Combo 💣🌶🔝👍😉)
 
 ```js
 export default class JsDeveloper {
