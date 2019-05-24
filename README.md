@@ -29,7 +29,8 @@ export default class JsDeveloper {
 
 JsDeveloper.defaultSkills = {
   jsFormats: ["ES6", "TypeScript"],
-  stylesPreprocessors: ["Sass", "Less", "Stylus"],
+  htmlPreprocessors: ["Jade", "Pug", "EJS"],
+  cssPreprocessors: ["Sass", "Less", "Stylus"],
   viewFrameworks: ["React", "Angular", "JQuery"],
   mobileFrameworks: ["React Native"],
   performanceOptimization: ["SSR", "PWA"],
