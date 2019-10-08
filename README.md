@@ -1,58 +1,69 @@
 ### Creative JavaScript Developer CV (Combo 💣🌶🔝👍😉)
 
 ```js
-export default class JsDeveloper {
+class JsDeveloper {
   constructor() {
-    this.hiringCompany = {};
+    this.developer = {
+      team: '',
+    };
   }
 
   static openProfile() {
-    window.open("https://www.linkedin.com/in/max-marinich");
+    window.open('https://www.linkedin.com/in/max-marinich');
   }
 
-  isOfferAwesome() {
-    const { offer } = this.hiringCompany;
+  static isOfferAwesome(offer) {
     // TODO add more checkers if an offer is competitive
     return Boolean(offer);
   }
 
+  updateDeveloper(options) {
+    this.developer.team = options.team;
+  }
+
   getDeveloper() {
-    console.log(`Glad to be a part of ${this.hiringCompany.name} team`);
+    const { team } = this.developer;
+
+    console.log(`Glad to be a part of ${team} team`);
     JsDeveloper.openProfile();
   }
 
   joinTeam(hiringCompany) {
-    this.hiringCompany = hiringCompany || {};
-    this.isOfferAwesome() && this.getDeveloper();
+    const { offer, team } = hiringCompany || {};
+
+    if (JsDeveloper.isOfferAwesome(offer)) {
+      this.updateDeveloper({ team });
+      this.getDeveloper();
+    }
   }
 }
 
 JsDeveloper.defaultSkills = {
-  jsFormats: ["ES6", "TypeScript"],
-  htmlPreprocessors: ["Jade", "Pug", "EJS"],
-  cssPreprocessors: ["Sass", "Less", "Stylus"],
-  viewFrameworks: ["React", "Angular", "JQuery"],
-  mobileFrameworks: ["React Native"],
-  performanceOptimization: ["SSR", "PWA"],
-  testFrameworks: ["Chai", "Mocha", "Jest"],
-  buildTools: ["Webpack", "Gulp"],
-  packageManagers: ["npm", "yarn"],
-  dashboardSystems: ["Jira", "GitHub"],
-  DBMS: ["MongoDB", "MySQL", "Redis"],
-  PMM: ["Scrum", "Less"],
-  VCS: "Git"
+  jsFormats: ['ES6', 'TypeScript'],
+  htmlPreprocessors: ['Jade', 'Pug', 'EJS'],
+  cssPreprocessors: ['Sass', 'Less', 'Stylus'],
+  viewFrameworks: ['React', 'Angular', 'JQuery'],
+  mobileFrameworks: ['React Native'],
+  performanceOptimization: ['SSR', 'PWA'],
+  testFrameworks: ['Chai', 'Mocha', 'Jest'],
+  buildTools: ['Webpack', 'Gulp'],
+  packageManagers: ['npm', 'yarn'],
+  dashboardSystems: ['Jira', 'GitHub'],
+  DBMS: ['MongoDB', 'MySQL', 'Redis'],
+  PMM: ['Scrum', 'Less'],
+  VCS: 'Git',
 };
 
 JsDeveloper.thingsWantToDevelop = {
   vanillaJs: true,
   reactNative: true,
   nodeJs: true,
-  viewLibrary: "React"
+  viewLibrary: 'React',
 };
 
 JsDeveloper.takeInterestIn = {
   gameDev: true,
   vueJs: true,
-  AWS: true
+  AWS: true,
 };
 ```
