@@ -42,7 +42,7 @@ JsDeveloper.defaultSkills = {
   jsFormats: ['ES6', 'TypeScript'],
   htmlPreprocessors: ['Jade', 'Pug', 'EJS'],
   cssPreprocessors: ['Sass', 'Less', 'Stylus'],
-  viewFrameworks: ['React', 'Angular', 'JQuery'],
+  viewFrameworks: ['React', 'Vue', 'Angular', 'JQuery'],
   mobileFrameworks: ['React Native'],
   performanceOptimization: ['SSR', 'PWA'],
   testFrameworks: ['Chai', 'Mocha', 'Jest'],
