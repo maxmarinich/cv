@@ -17,8 +17,8 @@ class JsDeveloper {
     return Boolean(offer);
   }
 
-  updateDeveloper(options) {
-    this.developer.team = options.team;
+  updateDeveloper({ team }) {
+    this.developer.team = team;
   }
 
   getDeveloper() {
