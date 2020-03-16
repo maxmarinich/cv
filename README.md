@@ -43,14 +43,14 @@ JsDeveloper.defaultSkills = {
   htmlPreprocessors: ['Jade', 'Pug', 'EJS'],
   cssPreprocessors: ['Sass', 'Less', 'Stylus'],
   viewFrameworks: ['React', 'Vue', 'Angular', 'JQuery'],
-  mobileFrameworks: ['React Native'],
-  performanceOptimization: ['SSR', 'PWA'],
+  mobileFrameworks: ['React Native', 'Native Script'],
+  performanceOptimization: ['SSR', 'PR', 'PWA'],
   testFrameworks: ['Chai', 'Mocha', 'Jest'],
   buildTools: ['Webpack', 'Gulp'],
   packageManagers: ['npm', 'yarn'],
   dashboardSystems: ['Jira', 'GitHub'],
   DBMS: ['MongoDB', 'MySQL', 'Redis'],
-  PMM: ['Scrum', 'Less'],
+  PMM: ['Scrum', 'Less', 'Kanban'],
   VCS: 'Git',
 };
 
