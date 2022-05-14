@@ -3,47 +3,44 @@
 ```js
 class JsDeveloper {
   constructor() {
-    this.developer = {
-      team: '',
-    };
+    this.teamName = '';
+    this.profile = 'https://www.linkedin.com/in/max-marinich';
   }
 
-  static openProfile() {
-    window.open('https://www.linkedin.com/in/max-marinich');
-  }
+  static checkIsClientSide() {
+    return typeof window === 'object';
+  };
 
-  static isOfferAwesome(offer) {
-    // TODO add more checkers if an offer is competitive
+  static checkIsOfferAwesome(offer) {
+    // TODO add more checkers;
     return Boolean(offer);
   }
 
-  updateDeveloper({ team }) {
-    this.developer.team = team;
+  updateProfile({ teamName }) {
+    this.teamName = teamName;
   }
 
-  getDeveloper() {
-    const { team } = this.developer;
-
-    console.log(`Glad to be a part of ${team} team`);
-    JsDeveloper.openProfile();
+  shareProfile() {
+    JsDeveloper.checkIsClientSide()
+      ? window.open(this.profile)
+      : console.log(`Profile: ${this.profile}`);
   }
 
-  joinTeam(hiringCompany) {
-    const { offer, team } = hiringCompany || {};
-
-    if (JsDeveloper.isOfferAwesome(offer)) {
-      this.updateDeveloper({ team });
-      this.getDeveloper();
+  joinTeam({ offer, teamName }) {
+    if (JsDeveloper.checkIsOfferAwesome(offer)) {
+      this.updateProfile({ teamName });
+      this.shareProfile();
     }
   }
 }
 
 JsDeveloper.defaultSkills = {
-  jsFormats: ['ES6', 'TypeScript'],
-  htmlPreprocessors: ['Jade', 'Pug', 'EJS'],
-  cssPreprocessors: ['Sass', 'Less', 'Stylus'],
+  jsFormats: ['ES6', 'TypeScript',],
+  blockchainFormats: ['Solidity'],
   viewFrameworks: ['React', 'Vue', 'Angular', 'JQuery'],
   mobileFrameworks: ['React Native', 'Native Script'],
+  htmlPreprocessors: ['Jade', 'Pug', 'EJS'],
+  cssPreprocessors: ['Sass', 'Less', 'Stylus'],
   performanceOptimization: ['SSR', 'PR', 'PWA'],
   testFrameworks: ['Chai', 'Mocha', 'Jest'],
   buildTools: ['Webpack', 'Gulp'],
@@ -55,15 +52,17 @@ JsDeveloper.defaultSkills = {
 };
 
 JsDeveloper.thingsWantToDevelop = {
-  vanillaJs: true,
-  reactNative: true,
+  blockchain: true,
   nodeJs: true,
+  vanillaJs: true,
   viewLibrary: 'React',
 };
 
 JsDeveloper.takeInterestIn = {
   gameDev: true,
+  reactNative: true,
   vueJs: true,
   AWS: true,
 };
+
 ```
