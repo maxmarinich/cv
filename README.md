@@ -4,7 +4,6 @@
 class JsDeveloper {
   constructor() {
     this.teamName = '';
-    this.profile = 'https://www.linkedin.com/in/max-marinich';
   }
 
   static checkIsClientSide() {
@@ -21,9 +20,10 @@ class JsDeveloper {
   }
 
   shareProfile() {
+    const profile = 'https://www.linkedin.com/in/max-marinich';
     JsDeveloper.checkIsClientSide()
-      ? window.open(this.profile)
-      : console.log(`Profile: ${this.profile}`);
+      ? window.open(profile)
+      : console.log(`Profile: ${profile}`);
   }
 
   joinTeam({ offer, teamName }) {
