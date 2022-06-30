@@ -35,9 +35,8 @@ class JsDeveloper {
 }
 
 JsDeveloper.defaultSkills = {
-  jsFormats: ['ES6', 'TypeScript'],
-  web3Formats: ['Solidity'],
-  blockchainFormats: ['Ethereum', 'Polygon', 'BSC']
+  devFormats: ['ES6', 'TypeScript', 'Solidity'],
+  blockchains: ['Ethereum', 'BSC'],
   viewFrameworks: ['React', 'Vue', 'Angular', 'JQuery'],
   mobileFrameworks: ['React Native', 'Native Script'],
   htmlPreprocessors: ['Jade', 'Pug', 'EJS'],
@@ -53,10 +52,10 @@ JsDeveloper.defaultSkills = {
 };
 
 JsDeveloper.thingsWantToDevelop = {
-  web3: true,
   nodeJs: true,
   vanillaJs: true,
   viewLibrary: 'React',
+  web3: ['DApp', 'DeFi'],
 };
 
 JsDeveloper.takeInterestIn = {
